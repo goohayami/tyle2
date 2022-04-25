@@ -1,7 +1,6 @@
 const base = document.getElementById("base-tyle");
 const one = document.getElementById("copy-one");
 const two = document.getElementById("copy-two");
-const rezult = document.getElementById("rezult");
 
 base.addEventListener("click", () => {
   const newBase = document.createElement("div");
@@ -9,7 +8,7 @@ base.addEventListener("click", () => {
   const count2 = two.childElementCount;
   const totalCount = count1 + count2;
 
-  rezult.textContent = totalCount + 1;
+  base.textContent = totalCount + 1;
   console.log(totalCount);
   newBase.className = "addNewBase";
   if (totalCount <= 4) {
@@ -18,6 +17,6 @@ base.addEventListener("click", () => {
     newBase.className = "changeBcolor";
     two.appendChild(newBase);
   } else {
-    rezult.textContent = totalCount;
+    base.textContent = totalCount;
   }
 });
